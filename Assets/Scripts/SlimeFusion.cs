@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class SlimeFusion : MonoBehaviour
+public class Slime
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public int life = 10;
+
+    public Slime(int _life)
     {
-        
+        life = _life;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static Slime operator +(Slime Slime1, Slime Slime2)
     {
-        
+        return new Slime(Slime1.life + Slime2.life);
     }
 }
